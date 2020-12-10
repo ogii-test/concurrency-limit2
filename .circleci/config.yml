@@ -6,7 +6,7 @@ orbs:
   win: circleci/windows@2.2.0
 
 jobs:
-  build-osx:
+  build:
     macos:  # indicate that we are using the macOS executor
       xcode: 11.3.0 # indicate our selected version of Xcode
     
