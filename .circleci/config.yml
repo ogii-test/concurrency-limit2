@@ -16,3 +16,13 @@ jobs:
       # virtual machine environment
       - checkout
       - run: Write-Host 'Hello, Windows'
+  
+  build-osx:
+    macos:  # indicate that we are using the macOS executor
+      xcode: 11.3.0 # indicate our selected version of Xcode
+    
+    parallelism: 4
+    
+    steps:
+      - checkout
+      - run: Write-Host 'Hello, Macos
