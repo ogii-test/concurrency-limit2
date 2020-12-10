@@ -1,7 +1,4 @@
-version: 2.1 # Use v2.1 to enable orb usage.
-
-# The Windows orb gives you everything you
-# need to start using the Windows executor.
+version: 2.1
 orbs:
   macos: circleci/macos@1.0.0
 
@@ -14,4 +11,4 @@ jobs:
     
     steps:
       - checkout
-      - run: Write-Host 'Hello, Macos
+      - run: Write-Host 'Hello, Macos'
