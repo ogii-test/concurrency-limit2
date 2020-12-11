@@ -9,7 +9,7 @@ jobs:
   build: # name of your job
     executor: win/default # executor type
 
-    parallelism: 5
+    parallelism: 4
 
     steps:
       # Commands are run in a Windows
