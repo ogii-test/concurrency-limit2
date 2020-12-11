@@ -1,18 +1,13 @@
 version: 2.1 # Use v2.1 to enable orb usage.
 
-# The Windows orb gives you everything you
-# need to start using the Windows executor.
-orbs:
-  win: circleci/windows@2.2.0
-
 jobs:
-  build: # name of your job
-    executor: win/default # executor type
-
-    parallelism: 4
-
+  build:
+    docker:
+      - image: alpine:3.7
+    parallelism: 5
     steps:
-      # Commands are run in a Windows
-      # virtual machine environment
-      - checkout
-      - run: Write-Host 'Hello, Windows'
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
