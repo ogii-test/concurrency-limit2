@@ -11,4 +11,4 @@ jobs:
     
     steps:
       - checkout
-      - run: Write-Host 'Hello, Macos'
+      - run: echo "Write-Host 'Hello, Macos"
