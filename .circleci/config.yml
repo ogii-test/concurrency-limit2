@@ -7,7 +7,7 @@ jobs:
     macos:  # indicate that we are using the macOS executor
       xcode: 11.3.0 # indicate our selected version of Xcode
     
-    parallelism: 1
+    parallelism: 4
     
     steps:
       - checkout
