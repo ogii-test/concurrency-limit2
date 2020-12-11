@@ -1,14 +1,18 @@
-version: 2.1 
+version: 2.1 # Use v2.1 to enable orb usage.
+
+# The Windows orb gives you everything you
+# need to start using the Windows executor.
 orbs:
-  macos: circleci/macos@1.0.0
+  win: circleci/windows@2.2.0
 
 jobs:
-  build:
-    macos:  # indicate that we are using the macOS executor
-      xcode: 11.3.0 # indicate our selected version of Xcode
-    
-    parallelism: 4
-    
+  build: # name of your job
+    executor: win/default # executor type
+
+    parallelism: 5
+
     steps:
+      # Commands are run in a Windows
+      # virtual machine environment
       - checkout
-      - run: echo "Write-Host 'Hello, Macos"
+      - run: Write-Host 'Hello, Windows'
